@@ -1,0 +1,175 @@
+
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 100px auto;
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    direction: ltr;
+    background: linear-gradient(to bottom, #5599ef 0% , #115fff 100%);
+}
+.container header{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.container .input{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+    
+}
+.input input{
+    width: 85%;
+    height: 100%;
+    font-size: 17px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.input button{
+    width: 60px;
+    height: 100%;
+    background: #6f73c2 ;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.input button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.container ul{
+    max-height: 250px;
+    overflow-y: auto;
+    
+}
+.todoList li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 7px;
+    padding: 0 25px;
+    cursor: default;
+}
+.todoList li:hover{
+    background: #beb6b6;
+}
+.todoList li:hover #deleteBtn,
+.todoList li:hover #editBtn,
+.todoList li:hover #saveBtn{
+    display: inline;
+}
+
+li #deleteBtn{
+    color: #bd3324;
+    position: absolute;
+    right:  20px;
+    cursor: pointer;
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 9px;
+}
+li #editBtn{
+    color: #4479af;
+    position: absolute;
+    right:  50px;
+    cursor: pointer;
+    display: none;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 9px;
+}
+li #saveBtn{
+    color: #28963a;
+    position: absolute;
+    right:  50px;
+    cursor: pointer;
+    display:none;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-top: 9px;
+}
+li .tick{
+    color: #277c3d;
+    left: 5px;
+    position: absolute;
+}
+li .notDone{
+    display: none;
+}
+
+.todoList li.checked{
+    text-decoration: line-through;
+    color: #888;
+    background-color: #4e4e48;
+}
+.container .footer{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    justify-content:center;
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+}
+
+.footer button{
+    padding: 5px;
+    background: #888 ;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    
+    margin-right: 5px;
+    display: flex;
+    right: 0px;
+    position:absolute;
+    margin-top: -50px;
+    pointer-events: none;
+}
+li input{
+    border: none;
+    background: #ccc;
+    outline: none;
+    font-size: 16px;
+    padding-right: 5px;
+    border-radius: 3px;;
+}
+.footer button.active{
+    background-color: #bd3324;
+    pointer-events: auto;
+    cursor: pointer;
+}
